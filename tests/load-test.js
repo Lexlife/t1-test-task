@@ -56,6 +56,9 @@ export default function () {
   // Получаем "Тип контента" для последующего вывода его в консоли
   const getContentType = JSON.parse(responses[0].body).headers['Content-Type'];
 
-  // Выводим в консоли "Тип контента" (для удобства чтения, сделал вывод красным цветом)	
-  console.info(`\x1b[41m\x1b[33m URL: Content-Type: ${getContentType}`);
+  // Оператор ветвления позволяет выводить в консоли "Тип контента" не при каждой итерации, а 1 раз для каждого этапа (stages)
+  if (__ITER === 0) {
+    // Выводим в консоли "Тип контента" (для удобства чтения, сделал вывод красным цветом)	
+    console.info(`\x1b[41m\x1b[33m URL: Content-Type: ${getContentType}`);
+  }
 }

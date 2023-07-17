@@ -20,5 +20,4 @@
 ![t1-consulting](./img/scenario_one.jpg)
 
 ### Сценарий 2:
-![t1-consulting](./img/scenario_two_part_one.jpg)
-![t1-consulting](./img/scenario_two_part_two.jpg)
+![t1-consulting](./img/scenario_two.jpg)
