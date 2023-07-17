@@ -38,6 +38,8 @@ export const options = {
       iterations: 1,
     },
     load_test: {
+      // name of the executor to use
+      executor: "per-vu-iterations",
       stages: [
         { duration: '10s', target: 0 },
         { duration: '10s', target: 2 },
