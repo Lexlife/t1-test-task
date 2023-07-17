@@ -4,15 +4,15 @@
 
 # Установка:
 
-### 1. Склонируй проект ```git@github.com:Lexlife/t1-consulting.git```.
+### 1. Склонируй проект ```git@github.com:Lexlife/t1-consulting.git```
 
-### 2. Установи k6 ```https://k6.io/docs/get-started/installation/```.
+### 2. Установи k6 ```https://k6.io/docs/get-started/installation/```
 
 # Выполнение сценариев:
 
-### Сценарий 1. Введи в терминале Bash команду ```k6 run .\tests\basic-test.js```.
+### Сценарий 1. Введи в терминале Bash команду ```k6 run .\tests\basic-test.js```
 
-### Сценарий 2. Введи в терминале Bash команду ```k6 run .\tests\load-test.js```.
+### Сценарий 2. Введи в терминале Bash команду ```k6 run .\tests\load-test.js```
 
 # Ожидаемые результаты:
 
@@ -21,3 +21,26 @@
 
 ### Сценарий 2:
 ![t1-consulting](./img/scenario_two.jpg)
+
+# Альтернативный вариант решения данной задачи
+### Помимо предложенного способа, данную задачу можно реализовать через настройки сценариев с использованием ключа "scenarios"
+
+### Пример:
+```
+export const options = {
+  scenarios: {
+    basic_test: {
+      // executor-specific configuration
+      vus: 1,
+      iterations: 1,
+    },
+    load_test: {
+      stages: [
+        { duration: '10s', target: 0 },
+        { duration: '10s', target: 2 },
+      ]
+    },
+  },
+};
+
+```
