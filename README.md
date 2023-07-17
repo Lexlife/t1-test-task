@@ -30,6 +30,9 @@
 export const options = {
   scenarios: {
     basic_test: {
+      // name of the executor to use
+      executor: 'shared-iterations',
+      
       // executor-specific configuration
       vus: 1,
       iterations: 1,
